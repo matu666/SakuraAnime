@@ -29,6 +29,7 @@ allprojects {
             allowInsecureProtocol = true
             url 'http://4thline.org/m2'
         }
+        maven { url "https://maven.aliyun.com/repository/public" }
     }
 }
 
