@@ -1,4 +1,4 @@
-name: Build and Release APK
+name: Build and Upload Release
 
 on:
   push:
@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-    name: Ubuntu
     runs-on: ubuntu-latest
 
     steps:
@@ -21,6 +20,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'zulu'
+        cache: gradle
 
     # Grant execute permission for gradlew
     - name: Grant execute permission for gradlew
