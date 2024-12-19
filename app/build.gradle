@@ -31,7 +31,6 @@ android {
 
 allprojects {
     repositories {
-        maven { url "https://jitpack.io" }
         maven {
            url 'https://maven.pkg.github.com/CarGuo/GSYVideoPlayer'
            credentials {
@@ -39,6 +38,7 @@ allprojects {
                password = project.findProperty("gpr.token") ?: System.getenv("GET_TOKEN")
            }
         }
+        maven { url "https://jitpack.io" }
     }
 }
 
