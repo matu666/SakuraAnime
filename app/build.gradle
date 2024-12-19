@@ -32,12 +32,13 @@ android {
 allprojects {
     repositories {
         maven {
-           url 'https://maven.pkg.github.com/CarGuo/GSYVideoPlayer'
-           credentials {
-               username = project.findProperty("gpr.user") ?: System.getenv("GET_ACTOR")
-               password = project.findProperty("gpr.token") ?: System.getenv("GET_TOKEN")
-           }
+            url = "https://github.com/matu666/GSYVideoPlayer-8.1.9-release-jitpack"
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.token") ?: System.getenv("GITHUB_TOKEN")
+            }
         }
+        maven { url 'https://jitpack.io' }
     }
 }
 
