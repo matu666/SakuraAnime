@@ -36,8 +36,8 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
       env:
-        GET_ACTOR: ${{ secrets.GET_ACTOR }}
-        GET_TOKEN: ${{ secrets.GET_TOKEN }}
+        GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # Sign APK
     - name: Sign APK
