@@ -70,10 +70,15 @@ jobs:
           ${{ runner.os }}-gradle-
 
     # Build APK
-    # --stacktrace --info
-    - name: Build APK
-      run: ./gradlew assembleRelease
-
+    # # --stacktrace --info
+    # - name: Build APK
+    #   run: ./gradlew assembleRelease
+    - name: Build with Gradle
+      run: ./gradlew build
+      env:
+        GET_ACTOR: ${{ secrets.GET_ACTOR }}
+        GET_TOKEN: ${{ secrets.GET_TOKEN }}
+        
     - name: List matched .gradle* files
       run: |
         echo "Listing all .gradle* files:"
